@@ -23,12 +23,7 @@ tasks.withType(JavaCompile) {
 }
 
 tasks.withType(Test) {
-    testLogging {
-        lifecycle {
-            events "started", "skipped", "failed", "standard_error", "standard_out"
-            exceptionFormat "full"
-        }
-    }
+    logging.captureStandardOutput LogLevel.INFO
 }
 
 dependencies {
